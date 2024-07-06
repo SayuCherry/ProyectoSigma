@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    background-color: #d0e1f9; /* Light blue background */
+    background-image: url(sigma.jpg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e9eef7; /* Light grey-blue */
+}
+
+
+
+header h1 {
+    color: #8a8a8a; /* Grey color */
+    font-size: 24px;
+}
+
+/* Estilos para el carrusel */
+.carousel-inner img {
+    width: 100%;  /* Ajusta el ancho de las imágenes al 100% del contenedor */
+    height: auto; /* Mantiene la proporción original de las imágenes */
+    border-radius: 10px; /* Añade bordes redondeados a las imágenes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra a las imágenes */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Color de fondo de los iconos de control */
+    border-radius: 50%; /* Bordes redondeados para los iconos */
+    padding: 10px; /* Espaciado interno para los iconos */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ancho de las áreas de control */
+}
+
+main {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main h2 {
+    color: #a29bfe; /* Light purple color */
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+main p {
+    color: #8ee1b9; /* Light grey color */
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+footer .camera-button {
+    background-color: #6c5ce7; /* Purple color */
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto; /* Asegura que el botón esté centrado */
+}
+
+footer .camera-button img {
+    height: 20px;
+    width: 20px;
+}
+
+footer .prueb-button {
+    background-color: #6c5ce7; /* Purple color */
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto; /* Asegura que el botón esté centrado */
+}
+
+footer .prueb-button img {
+    height: 20px;
+    width: 20px;
+}

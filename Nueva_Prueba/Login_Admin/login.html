@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Administrador</title>
+   
+</head>
+<body>
+  
+    <main>
+       <div class="contenedor__todo">
+        <!--Cajas detras de los formularios-->
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3> ¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar a la pagina</p>
+                <button id= "btn__iniciar-sesion"> Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3> ¿Aun no tienes una cuenta?</h3>
+                <p>Registrate paraque puedas iniciar sesión</p>
+                <button id= "btn__register"> Registrar</button>
+            </div>
+        </div>
+        <!--Formulario de login y register-->
+        <div class="contenedor__login-register">
+            <!--Login-->
+            <form action="loginU.php" method="POST" class="formulario__login">
+                <h2>Iniciar Sesión</h2>
+                <input placeholder="Correo electronico"type="email" id="email" name="correo">
+                <input type="password" id="password" name="contrasena" placeholder="Contraseña">
+                
+                <button>Entrar</button><br>
+                <a class="link" href="../IngresarCorreo/Correo.html">¿Olvidaste tu contraseña?</a><br>
+                <a href="../Nuevo/login.html">¿Eres usuario? entra aquí</a>
+            </form>
+
+            <!--Register-->
+            <form action="registro.php" method="POST" class="formulario__register">
+                <h2>Registrarse</h2>
+                <input type="text" placeholder="Nombre completo" name="nombre_completo">
+                <input type="text" placeholder="Correo electronico" name="correo">
+                <input type="text"  id="" placeholder="usuario" name="usuario" >
+                <input type="password" placeholder="contraseña" name="contrasena">
+                <button>Registrar</button>
+               
+            </form>
+        </div>
+       </div>
+
+    </main>
+  <script>
+    console.log("hola"); 
+    document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion); 
+    document.getElementById("btn__register").addEventListener("click", Register); 
+    window.addEventListener("resize", anchopagina); 
+
+//declaracion de variables 
+var contenedor_login_register = document.querySelector(".contenedor__login-register"); 
+var formulario_login = document.querySelector(".formulario__login"); 
+var formulario_register = document.querySelector(".formulario__register"); 
+var caja_trasera_login = document.querySelector(".caja__trasera-login"); 
+var caja_trasera_register = document.querySelector(".caja__trasera-register"); 
+
+function anchopagina(){
+    if (window.innerWidth > 850){
+        caja_trasera_login.style.display="block"; 
+        caja_trasera_register.style.display ="block"
+    }
+    else{
+        caja_trasera_register.style.display = "block"; 
+        caja_trasera_register.style.opacity = "1"; 
+        caja_trasera_login.style.display = "none"
+        formulario_login.style.display = "block "; 
+        formulario_register.style.display = "none"; 
+        contenedor_login_register.style.left= "0px"; 
+    }
+}
+
+anchopagina(); 
+
+function iniciarSesion(){
+ if(window.innerWidth > 840){
+    formulario_register.style.display = "none" ; //clik al boton de register
+ contenedor_login_register.style.left = "10px" ; // form
+ formulario_login.style.display = "block";
+ caja_trasera_login.style.opacity = "0";
+ caja_trasera_register.style.opacity = "1";
+ 
+ }
+ else {
+    formulario_register.style.display = "none" ; //clik al boton de register
+ contenedor_login_register.style.left = "0" ; // form
+ formulario_login.style.display = "block";
+ caja_trasera_login.style.opacity = "none";
+ caja_trasera_register.style.display = "block";
+ 
+ }
+ 
+
+}
+
+function Register(){
+
+    if(window.innerWidth > 850){
+        formulario_register.style.display = "block" ; //clik al boton de register
+ contenedor_login_register.style.left = "410px" ; // form
+ formulario_login.style.display = "none";
+ caja_trasera_register.style.opacity = "0";
+ caja_trasera_login.style.opacity = "1";
+    }
+    else {
+        formulario_register.style.display = "block" ; //clik al boton de register
+ contenedor_login_register.style.left = "0" ; // form
+ formulario_login.style.display = "none";
+ caja_trasera_register.style.display = "none";
+ caja_trasera_login.style.display = "block";
+ caja_trasera_login.style.opacity = "1" ; 
+    }
+
+
+}
+  </script>
+</body>
+</html>
